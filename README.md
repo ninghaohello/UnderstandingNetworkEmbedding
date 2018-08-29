@@ -1,6 +1,6 @@
 # UnderstandingNetworkEmbedding
 
-This project implements the framework proposed by the paper: <br>
+This project implements the proposed framework for running the experiments in the paper: <br>
 
 **On Interpretation of Network Embedding via Taxonomy Induction**<br>
 Ninghao Liu, Xiao Huang, Jundong Li, Xia Hu<br>
