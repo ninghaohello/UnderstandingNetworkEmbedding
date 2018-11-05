@@ -139,6 +139,7 @@ function [subset, W_buffer_one, H_buffer_one, priority_one, outliers] = split_ju
 trial = 0;
 subset_backup = subset;
 while trial < trial_max       % trial_allowance -> T in Alg3
+
 	[cluster_subset, W_buffer_one, H_buffer_one, priority_one] = actual_split(X, subset, W_parent);
 	if priority_one < 0
 		break;
@@ -156,7 +157,7 @@ while trial < trial_max       % trial_allowance -> T in Alg3
         % try to split the small cluster to see if doable
 		[cluster_subset_small, W_buffer_one_small, H_buffer_one_small, priority_one_small] = actual_split(X, subset_small, W_buffer_one(:, idx_small));
 		if priority_one_small < min_priority    % shoud not split, just outliers
-			trial = trial + 1;
+
 			if trial < trial_max
 				disp(['Drop ', num2str(length(subset_small)), ' documents ...']);
 				subset = setdiff(subset, subset_small);     % remove outliers, then try split the major cluster
@@ -168,6 +169,7 @@ while trial < trial_max       % trial_allowance -> T in Alg3
 	else
 		break;
 	end
+        trial = trial + 1;
 end
 
 if trial == trial_max
