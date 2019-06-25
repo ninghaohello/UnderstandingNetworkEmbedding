@@ -1,4 +1,4 @@
-# UnderstandingNetworkEmbedding
+# Network Embedding Interpretation
 
 This project implements the proposed framework for running the experiments in the paper: <br>
 
